@@ -138,6 +138,9 @@
                 <argument>io.vertx.core.Launcher</argument>
                 <argument>run</argument>
                 <argument>${main.verticle}</argument>
+                <argument>--redeploy=src/**/*</argument>
+                <argument>--launcher-class=io.vertx.core.Launcher</argument>
+                <argument>--on-redeploy=mvn compile</argument>
               </arguments>
             </configuration>
           </execution>

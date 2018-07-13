@@ -14,11 +14,11 @@ public class MainVerticle extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> startFuture) throws Exception {
-       
+        System.out.println("this is redeploy !!!");
         Future<String> dbDeployment = Future.future();
         vertx.deployVerticle(new WikiDatabaseVerticle(), dbDeployment.completer());
 
-     
+
         dbDeployment.compose(id -> {
             Future<String> deployment = Future.future();
             vertx.deployVerticle("io.vertx.source.HttpServerVerticle",
