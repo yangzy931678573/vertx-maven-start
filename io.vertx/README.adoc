@@ -10,8 +10,13 @@ This project is a template to start your own Vert.x project using Apache Maven.
 == Getting started
 
 [source]
+== build the project
+
+To run the project, just use:
 ----
-mvn clean package 
+mvn clean install 
+----
+this will create a fat jar in target
 
 == run the project
 
